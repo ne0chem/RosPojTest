@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container/Container';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 export default function Layout() {
   return (
@@ -11,6 +12,7 @@ export default function Layout() {
       <Header />
       <Container as="main" id="main" className="main">
         <Outlet />
+        <ContactForm />
       </Container>
       <Footer />
     </div>

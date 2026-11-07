@@ -1,0 +1,149 @@
+.services-section {
+  padding-block: 36px 64px;
+}
+
+.services-section .text-title {
+  margin: 0 0 36px;
+  color: var(--color-heading);
+}
+
+.services-section .text-title::before {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 5px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background: var(--color-accent);
+}
+
+.services-section-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-column: span 2;
+  min-height: 330px;
+  padding: 32px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background-color: var(--color-surface-start);
+  background-image: linear-gradient(90deg, var(--color-surface-start) 8%, var(--color-surface-overlay) 45%, var(--color-surface-fade) 100%), var(--service-image, none);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+.service-card--testing,
+.service-card--risk {
+  grid-column: span 3;
+  min-height: 280px;
+}
+
+.service-card--risk {
+  background-position: center, right bottom;
+  background-size: cover, 140%;
+}
+
+.service-icon {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+}
+
+.service-icon-accent {
+  stroke: var(--color-accent);
+}
+
+.service-card h3 {
+  max-width: 310px;
+  margin: 0 0 24px;
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-compact);
+  letter-spacing: var(--letter-spacing-card);
+  text-wrap: balance;
+}
+
+.service-card-arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  margin-top: auto;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.service-card-arrow svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.service-card:hover {
+  border-color: var(--color-divider);
+}
+
+.service-card:hover .service-card-arrow {
+  background: var(--color-heading);
+  color: var(--color-surface);
+}
+
+@media (max-width: 1100px) {
+  .services-section-grid {
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .services-section-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card,
+  .service-card--testing,
+  .service-card--risk {
+    grid-column: span 1;
+    min-height: 310px;
+  }
+
+  .service-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 540px) {
+  .services-section {
+    padding-block: 24px 40px;
+  }
+
+  .services-section .text-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .services-section-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card,
+  .service-card--testing,
+  .service-card--risk {
+    min-height: 280px;
+  }
+}

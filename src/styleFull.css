@@ -1,6 +1,6 @@
 .text-title {
-  font-size: 40px;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-title);
+  letter-spacing: var(--letter-spacing-title);
 }
