@@ -1,13 +1,7 @@
 import React, { useId } from 'react';
+import { Link } from 'react-router-dom';
+import { serviceCategories } from '../../data/serviceCategories';
 import './ServicesSection.css';
-
-const services = [
-  { id: 'testing', icon: 'fire', title: 'Испытания противопожарных систем и огнезащитная обработка', image: 'architecture' },
-  { id: 'risk', icon: 'inspection', title: 'Независимая оценка пожарного риска', image: 'architecture' },
-  { id: 'research', icon: 'microscope', title: 'Экспертные исследования', image: 'laboratory' },
-  { id: 'accreditation', icon: 'alarm', title: 'Аккредитация экспертов по системам противопожарной защиты и испытательных лабораторий' },
-  { id: 'documentation', icon: 'documents', title: 'Определение соответствия проектной документации в области ПБ', image: 'blueprints' },
-];
 
 function ServiceIcon({ name }) {
   const drawings = {
@@ -20,14 +14,15 @@ function ServiceIcon({ name }) {
   return <svg className="service-icon" viewBox="0 0 60 60" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{drawings[name]}</svg>;
 }
 
-export default function ServicesSection({ cardHref = '/services' }) {
+export default function ServicesSection({ onSelect, selectedId, detailsId }) {
   const titleId = useId();
+  const Card = onSelect ? 'button' : Link;
   return (
 <section className="services-section" aria-labelledby={titleId}>
       <h2 id={titleId} className="text-title">Наши услуги</h2>
       <div className="services-section-grid">
-        {services.map(({ id, icon, title, image }) => (
-          <a key={id} href={cardHref} className={`service-card service-card--${id}`} style={image ? { '--service-image': `url('/images/services/${image}.jpg')` } : undefined}>
+        {serviceCategories.map(({ id, icon, title, image }) => (
+          <Card key={id} {...(onSelect ? { type: 'button', onClick: () => onSelect(id), 'aria-expanded': selectedId === id, 'aria-controls': detailsId } : { to: `/services#${id}` })} className={`service-card service-card--${id}`} style={image ? { '--service-image': `url('/images/services/${image}.jpg')` } : undefined}>
             <ServiceIcon name={icon} />
             <h3>{title}</h3>
             <span className="service-card-arrow" aria-hidden="true">
@@ -35,7 +30,7 @@ export default function ServicesSection({ cardHref = '/services' }) {
                 <path d="M5 12h14m-6-6 6 6-6 6" />
               </svg>
             </span>
-          </a>
+          </Card>
         ))}
       </div>
     </section>

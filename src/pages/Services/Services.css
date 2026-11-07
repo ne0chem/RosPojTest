@@ -1,7 +1,22 @@
+.service-category-details { scroll-margin-top: 24px; }
+.service-category-content { padding-block: 32px; }
+.service-category-content h2 { font-size: clamp(28px, 3.5vw, 44px); color: var(--color-heading); }
+
+.service-category-breadcrumbs {
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.service-category-back {
+  display: inline-block;
+  margin-block: 24px 40px;
+  text-underline-offset: 4px;
+}
+
 .services-hero {
   position: relative;
   isolation: isolate;
-  padding-block: 24px 72px;
+  padding-block: 80px 112px;
   color: var(--color-heading);
 }
 
@@ -13,9 +28,11 @@
   left: calc((100% - 100vw) / 2);
   width: 100vw;
   background-color: var(--color-background);
-  background-image: linear-gradient(to bottom, var(--color-surface-overlay), var(--color-surface-fade) 45%, var(--color-background)), var(--hero-background-image);
+  background-image: linear-gradient(to bottom, var(--color-surface-overlay) 0%, var(--color-surface-fade) 40%, var(--color-background) 94%), var(--hero-background-image);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(to bottom, #000 65%, transparent 96%);
 }
 
 .services-breadcrumbs {
@@ -69,7 +86,7 @@
 
 @media (max-width: 600px) {
   .services-hero {
-    padding-block: 16px 48px;
+    padding-block: 48px 80px;
   }
 
   .services-breadcrumbs {

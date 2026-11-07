@@ -52,6 +52,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: calc(var(--header-height, 96px) + 16px);
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -69,6 +73,9 @@ a {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: linear-gradient(110deg, var(--color-surface-start), var(--color-background) 65%, var(--color-surface-end));
   border-bottom: 1px solid var(--color-border-light);
 }

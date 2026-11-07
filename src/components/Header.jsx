@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Container from './Container/Container';
 export default function Header() {
   const { pathname, hash } = useLocation();
-  return <header className="header"><Container className="header-inner">
+  const headerRef = useRef(null);
+  useLayoutEffect(() => {
+    const updateHeight = () => document.documentElement.style.setProperty('--header-height', `${headerRef.current.getBoundingClientRect().height}px`);
+    updateHeight();
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(headerRef.current);
+    return () => observer.disconnect();
+  }, []);
+  return <header className="header" ref={headerRef}><Container className="header-inner">
     <Link className="brand" to="/" aria-label="Роспожтест — главная"><span className="brand-mark">РОС<br/>ПОЖ<br/>ТЕСТ</span><span className="brand-text"><strong>РОСПОЖТЕСТ</strong><small>ИСПЫТАТЕЛЬНАЯ<br/>ПОЖАРНАЯ ЛАБОРАТОРИЯ</small></span></Link>
     <nav className="navigation" aria-label="Основная навигация">{[['/','Главная'],['/services','Услуги'],['/#about-company','О компании'],['/contacts','Контакты']].map(([to,label]) => to === '/#about-company'
-      ? <a key={to} href={to} className={`nav-link${pathname === '/' && hash === '#about-company' ? ' active' : ''}`} aria-current={pathname === '/' && hash === '#about-company' ? 'location' : undefined}>{label}</a>
+      ? <Link key={to} to={to} onClick={() => { if (pathname === '/') document.getElementById('about-company')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }} className={`nav-link${pathname === '/' && hash === '#about-company' ? ' active' : ''}`} aria-current={pathname === '/' && hash === '#about-company' ? 'location' : undefined}>{label}</Link>
       : <NavLink key={to} to={to} end={to==='/'} className={({isActive})=>`nav-link${isActive && !(to === '/' && hash === '#about-company') ? ' active' : ''}`}>{label}</NavLink>)}</nav>
     <div className="header-actions">
       <a className="button header-cta" href="#contact-form">Оставить заявку</a>

@@ -1,0 +1,31 @@
+.documentation-compliance { position: relative; isolation: isolate; padding-block: 60px 80px; color: var(--color-text); }
+.documentation-compliance::before { content: ''; position: absolute; z-index: -1; inset: 0 calc((100% - 100vw) / 2); background: linear-gradient(var(--color-background), #e8eef6 45%, var(--color-background)); }
+.documentation-compliance h2 { max-width: 1000px; margin: 0 0 40px; color: var(--color-heading); font-size: clamp(28px, 3.5vw, 44px); line-height: 1.15; letter-spacing: -1.2px; }
+.documentation-compliance h2::before { content: ''; display: block; width: 56px; height: 5px; margin-bottom: 30px; background: #c93840; }
+.documentation-compliance-lead { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr); align-items: center; gap: 48px; margin-bottom: 44px; }
+.documentation-compliance-lead > p { margin: 0; color: var(--color-heading); font-size: 22px; font-weight: 600; line-height: 1.65; }
+.documentation-compliance-visual { min-height: 220px; border-radius: 24px; background: linear-gradient(90deg, #eaf0f899, #eaf0f81a), url('/images/services/blueprints.jpg') center right / cover; opacity: .85; }
+.documentation-compliance-copy { max-width: 1060px; margin-inline: auto; }
+.documentation-compliance-copy p, .documentation-compliance-conclusion p { margin: 0 0 24px; font-size: 17px; line-height: 1.85; }
+.documentation-compliance-elements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 36px 0 0; padding: 0; list-style: none; counter-reset: documentation-step; }
+.documentation-compliance-elements li { position: relative; padding: 32px; border: 1px solid #dce3ed; border-radius: 20px; background: #f9fbfd; box-shadow: 0 5px 16px #30496508; counter-increment: documentation-step; }
+.documentation-compliance-elements li::before { content: counter(documentation-step); display: grid; place-items: center; width: 32px; height: 32px; margin-bottom: 20px; border-radius: 50%; color: #647d9a; background: #eaf0f7; font-size: 14px; font-weight: 700; }
+.documentation-compliance-elements h3 { margin: 0 0 14px; color: var(--color-heading); font-size: 20px; line-height: 1.4; }
+.documentation-compliance-elements p { margin: 0; font-size: 17px; line-height: 1.8; }
+.documentation-compliance-conclusion { max-width: 1060px; margin: 48px auto 0; padding-top: 32px; border-top: 1px solid #d6dfeb; }
+.documentation-compliance-conclusion p { margin-bottom: 0; }
+@media (max-width: 900px) {
+  .documentation-compliance-lead { gap: 24px; }
+  .documentation-compliance-lead > p { font-size: 20px; }
+  .documentation-compliance-elements li { padding: 24px; }
+}
+@media (max-width: 640px) {
+  .documentation-compliance { padding-block: 36px 48px; }
+  .documentation-compliance h2 { margin-bottom: 28px; letter-spacing: -.7px; }
+  .documentation-compliance-lead { grid-template-columns: 1fr; margin-bottom: 32px; }
+  .documentation-compliance-visual { min-height: 160px; }
+  .documentation-compliance-elements { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+  .documentation-compliance-elements h3 { font-size: 18px; }
+  .documentation-compliance-copy p, .documentation-compliance-elements p, .documentation-compliance-conclusion p { font-size: 16px; }
+  .documentation-compliance-conclusion { margin-top: 32px; padding-top: 24px; }
+}
