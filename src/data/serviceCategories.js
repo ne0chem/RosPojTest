@@ -1,7 +1,8 @@
 export const serviceCategories = [
-  { id: 'testing', icon: 'fire', title: 'Испытания противопожарных систем и огнезащитная обработка', image: 'architecture' },
+  { id: 'testing', icon: 'alarm', title: "Проведение испытаний на работоспособность систем противопожарной защиты.", image: 'architecture' },
+  { id: 'fireproofing', icon: 'fire', title: "Проверка состояния и качества огнезащитной обработки материалов, изделий и конструкций.", image: 'architecture' },
   { id: 'risk', icon: 'inspection', title: 'Независимая оценка пожарного риска', image: 'architecture' },
-  { id: 'research', icon: 'microscope', title: 'Экспертные исследования', image: 'laboratory' },
-  { id: 'accreditation', icon: 'alarm', title: 'Аккредитация экспертов по системам противопожарной защиты и испытательных лабораторий' },
+  { id: 'research', icon: 'microscope', title: 'Исследование пожаров и проведение экспертных испытаний и исследований', image: 'laboratory' },
+  { id: 'accreditation', icon: 'certificate', title: 'Аккредитация экспертов и испытательных лабораторий в системе добровольной сертификации' },
   { id: 'documentation', icon: 'documents', title: 'Определение соответствия проектной документации в области ПБ', image: 'blueprints' },
 ];

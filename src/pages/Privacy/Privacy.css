@@ -1,0 +1,10 @@
+.privacy-page { max-width: 960px; margin-inline: auto; padding-block: 32px 80px; color: var(--color-text); font-size: 17px; line-height: 1.8; }
+.privacy-back { display: inline-block; margin-bottom: 32px; color: var(--color-text-muted); text-decoration: none; }
+.privacy-page h1 { margin: 0 0 20px; color: var(--color-heading); font-size: clamp(30px, 4vw, 52px); line-height: 1.15; letter-spacing: -1px; overflow-wrap: anywhere; }
+.privacy-page h1::before { content: ''; display: block; width: 72px; height: 5px; margin-bottom: 28px; background: var(--color-accent); }
+.privacy-page .privacy-date { margin-bottom: 40px; font-size: 14px; color: var(--color-text-muted); }
+.privacy-page h2 { margin: 36px 0 14px; color: var(--color-heading); font-size: 24px; line-height: 1.35; }
+.privacy-page p { margin: 0 0 20px; }
+.privacy-page a { text-underline-offset: 4px; overflow-wrap: anywhere; }
+.privacy-page a:hover { color: var(--color-accent); }
+@media (max-width: 540px) { .privacy-page { padding-block: 20px 48px; font-size: 16px; } .privacy-page h2 { font-size: 21px; } }

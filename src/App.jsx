@@ -7,6 +7,7 @@ import ServiceCategory from "./pages/Services/ServiceCategory";
 import About from "./pages/About/About";
 import Contacts from "./pages/Contacts/Contacts";
 import NotFound from "./pages/NotFound/NotFound";
+import Privacy from "./pages/Privacy/Privacy";
 
 export default function App() {
   return (
@@ -17,6 +18,8 @@ export default function App() {
         <Route path="services/:categoryId" element={<ServiceCategory />} />
         <Route path="about" element={<About />} />
         <Route path="contacts" element={<Contacts />} />
+        <Route path="privacy-policy" element={<Privacy />} />
+        <Route path="personal-data-consent" element={<Privacy consent />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

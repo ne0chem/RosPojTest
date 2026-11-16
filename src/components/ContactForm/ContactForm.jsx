@@ -9,7 +9,7 @@ function FieldIcon({ name }) {
   </svg>;
 }
 
-export default function ContactForm({ policyUrl }) {
+export default function ContactForm({ policyUrl = '/privacy-policy' }) {
   const [notice, setNotice] = useState('');
 
   function handleSubmit(event) {

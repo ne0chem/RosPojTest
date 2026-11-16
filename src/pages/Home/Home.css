@@ -3,8 +3,8 @@
   isolation: isolate;
   display: flex;
   align-items: center;
-  min-height: clamp(480px, 48vw, 680px);
-  padding-block: 80px;
+  min-height: var(--hero-min-height);
+  padding-block: var(--hero-padding-block);
 }
 
 .home-hero::before {
@@ -49,23 +49,7 @@
   letter-spacing: var(--letter-spacing-title);
 }
 
-.home-hero-cta {
-  justify-content: center;
-  min-height: 48px;
-  margin-top: 44px;
-  padding: 14px 24px;
-  border-radius: 6px;
-  font-size: 18px;
-  text-align: center;
-  font-weight: 400;
-}
-
 @media (max-width: 600px) {
-  .home-hero {
-    min-height: 440px;
-    padding-block: 56px;
-  }
-
   .home-hero::before {
     background-position: 60% center;
   }
@@ -75,7 +59,4 @@
     letter-spacing: -.8px;
   }
 
-  .home-hero-cta {
-    margin-top: 32px;
-  }
 }

@@ -1,4 +1,6 @@
 :root {
+  --hero-min-height: clamp(480px, 48vw, 680px);
+  --hero-padding-block: 80px;
   --hero-background-image: url("/images/123.png");
 
   /* Общие цвета */
@@ -97,17 +99,13 @@ a {
   flex-shrink: 0;
 }
 
-.brand-mark {
+.brand-logo {
   display: block;
-  padding: 7px 9px;
-  background: var(--color-brand);
-  color: var(--color-surface);
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -.4px;
-  border-radius: 5px;
+  width: 91px;
+  height: auto;
+  flex-shrink: 0;
 }
+
 
 .brand-text {
   display: grid;
@@ -220,25 +218,6 @@ h1 {
   letter-spacing: -2.7px;
 }
 
-.footer {
-  padding-block: 24px;
-  color: var(--color-text-muted);
-  background: var(--color-surface-start);
-  border-top: 1px solid var(--color-border-light);
-  font-size: 10px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-}
-
-.footer a {
-  text-decoration: none;
-  color: var(--color-text);
-}
-
 .page {
   padding-block: 30px 70px;
 }
@@ -304,9 +283,6 @@ h1 {
     min-height: 48px;
   }
 
-  .footer-inner > span:nth-child(2) {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -322,9 +298,8 @@ h1 {
     padding-left: 8px;
   }
 
-  .brand-mark {
-    font-size: 13px;
-    padding: 6px;
+  .brand-logo {
+    width: 70px;
   }
 
   .brand-text strong {
@@ -350,5 +325,11 @@ h1 {
 @media(prefers-reduced-motion:reduce) {
   * {
     transition: none!important;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --hero-min-height: 440px;
+    --hero-padding-block: 56px;
   }
 }

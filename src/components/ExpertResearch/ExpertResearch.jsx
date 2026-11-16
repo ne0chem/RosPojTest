@@ -1,12 +1,13 @@
 import React, { useId } from 'react';
 import { expertResearchWorks, expertResearchDescription } from '../../data/expertResearch';
 import './ExpertResearch.css';
+import { serviceCategories } from '../../data/serviceCategories';
 
 export default function ExpertResearch() {
   const titleId = useId();
   return (
     <section className="expert-research" aria-labelledby={titleId}>
-      <h2 id={titleId}>Экспертные исследования</h2>
+      <h2 id={titleId}>{serviceCategories.find(({ id }) => id === 'research').title}</h2>
       <div className="expert-research-intro">
         <p>{expertResearchDescription[0]}</p>
         <div className="expert-research-visual" aria-hidden="true" />

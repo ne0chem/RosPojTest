@@ -37,14 +37,13 @@ export default function Services() {
 
   return <>
     <section className="services-hero" aria-labelledby="services-page-title">
-      <h1 id="services-page-title">Услуги лаборатории</h1>
+      <h1 id="services-page-title">УСЛУГИ<br />ЛАБОРАТОРИИ</h1>
       <p>Испытания, экспертиза и оценка соответствия в области пожарной безопасности.</p>
-      <a className="button services-hero-cta" href="#contact-form">Обсудить задачу</a>
     </section>
     <ServicesSection onSelect={selectCategory} selectedId={category?.id} detailsId="service-category-details" />
     <div id="service-category-details" className="service-category-details" ref={detailsRef} hidden={!category}>
       {category && <>
-        {category.id === 'testing' ? <FireServices /> : category.id === 'risk' ? <RiskAssessment /> : category.id === 'research' ? <ExpertResearch /> : category.id === 'accreditation' ? <Accreditation /> : <DocumentationCompliance />}
+        {['testing', 'fireproofing'].includes(category.id) ? <FireServices categoryId={category.id} /> : category.id === 'risk' ? <RiskAssessment /> : category.id === 'research' ? <ExpertResearch /> : category.id === 'accreditation' ? <Accreditation /> : <DocumentationCompliance />}
       </>}
     </div>
   </>;

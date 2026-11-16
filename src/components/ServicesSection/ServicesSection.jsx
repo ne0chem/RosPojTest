@@ -5,6 +5,7 @@ import './ServicesSection.css';
 
 function ServiceIcon({ name }) {
   const drawings = {
+    certificate: <><path d="M31 49H12a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h29a3 3 0 0 1 3 3v17M17 15h19M17 23h19M17 31h10M17 39h7"/><circle className="service-icon-accent" cx="41" cy="37" r="10"/><path className="service-icon-accent" d="m36 37 3 3 6-6m-10 11-3 11 9-5 9 5-3-11"/></>,
     fire: <><path d="M26 4c2 12-10 13-8 23 1-5 5-7 7-11 1 7 12 10 10 20 7-4 8-12 5-18 12 16 5 31-13 31C8 49 4 32 14 19c-1 7 0 10 2 12C11 18 24 15 26 4Z"/><path className="service-icon-accent" d="M27 29c1 7-6 8-6 14a7 7 0 0 0 14 0c0-5-6-8-8-14Z"/></>,
     inspection: <><path d="M31 9H13a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h20M21 9V6h9v3h5v6H17V9Z"/><circle className="service-icon-accent" cx="36" cy="31" r="11"/><path className="service-icon-accent" d="m44 39 8 9"/></>,
     microscope: <><path d="m27 5 9 5-12 22-9-5ZM26 6l3-5 8 5-3 5M18 30l-2 4 6 3 3-4M27 31c12 0 15 15 3 17H13v5h33M10 42h16M36 19c19 5 20 29 5 34"/><path className="service-icon-accent" d="M39 24c10 5 12 20 2 25"/></>,

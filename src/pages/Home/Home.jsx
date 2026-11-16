@@ -4,6 +4,7 @@ import './Home.css';
 import ServicesSection from '../../components/ServicesSection/ServicesSection';
 import AboutCompany from '../../components/AboutCompany/AboutCompany';
 import WhyUs from '../../components/WhyUs/WhyUs';
+import Certificate from '../../components/Accreditation/Certificate';
 
 export default function Home() {
   const { hash, key } = useLocation();
@@ -17,13 +18,14 @@ export default function Home() {
     <section className="home-hero" aria-labelledby="home-hero-title">
       <div className="home-hero-content">
         <h1 id="home-hero-title">ИСПЫТАТЕЛЬНАЯ<br />ПОЖАРНАЯ<br />ЛАБОРАТОРИЯ</h1>
-        <a className="button home-hero-cta" href="#contact-form">
-          Оставить заявку
-        </a>
       </div>
     </section>
+    <section className="accreditation home-accreditation" aria-labelledby="home-accreditation-title">
+      <h2 id="home-accreditation-title">Аккредитация лаборатории</h2>
+      <Certificate />
+    </section>
     <ServicesSection />
-    <AboutCompany imageSrc="/images/about.png" />
+    <AboutCompany imageSrc="/images/about-fire-laboratory.webp" />
     <WhyUs imageSrc="/images/plus.png" />
   </>;
 }
