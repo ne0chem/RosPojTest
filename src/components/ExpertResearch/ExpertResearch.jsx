@@ -26,9 +26,8 @@ export default function ExpertResearch() {
       <div className="expert-research-description">
         <p>{expertResearchInspectionIntro}</p>
         <ul className="expert-research-works expert-research-inspection">
-          {expertResearchInspectionWorks.map(({ icon, text }) => (
+          {expertResearchInspectionWorks.map(({ text }) => (
             <li key={text}>
-              <span className="expert-research-marker" aria-hidden="true">{icon}</span>
               <p>{text}</p>
             </li>
           ))}
