@@ -1,5 +1,5 @@
 import React, { useId } from 'react';
-import { expertResearchWorks, expertResearchDescription } from '../../data/expertResearch';
+import { expertResearchWorks, expertResearchDescription, expertResearchInspectionIntro, expertResearchInspectionWorks } from '../../data/expertResearch';
 import './ExpertResearch.css';
 import { serviceCategories } from '../../data/serviceCategories';
 
@@ -12,18 +12,27 @@ export default function ExpertResearch() {
         <p>{expertResearchDescription[0]}</p>
         <div className="expert-research-visual" aria-hidden="true" />
       </div>
+      <div className="expert-research-description expert-research-overview">
+        {expertResearchDescription.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      </div>
+      <h3 className="expert-research-subtitle">Задачи, решаемые при расследовании пожаров и проведении экспертных исследований и испытаний:</h3>
       <ul className="expert-research-works">
         {expertResearchWorks.map((work) => (
           <li key={work}>
-            <span className="expert-research-marker" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14m-5-5 5 5-5 5" /></svg>
-            </span>
             <p>{work}</p>
           </li>
         ))}
       </ul>
       <div className="expert-research-description">
-        {expertResearchDescription.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        <p>{expertResearchInspectionIntro}</p>
+        <ul className="expert-research-works expert-research-inspection">
+          {expertResearchInspectionWorks.map(({ icon, text }) => (
+            <li key={text}>
+              <span className="expert-research-marker" aria-hidden="true">{icon}</span>
+              <p>{text}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

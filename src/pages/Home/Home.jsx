@@ -25,7 +25,7 @@ export default function Home() {
       <Certificate />
     </section>
     <ServicesSection />
-    <AboutCompany imageSrc="/images/about-fire-laboratory.webp" />
+    <AboutCompany imageSrc="/images/about-fire-systems.jpg" />
     <WhyUs imageSrc="/images/plus.png" />
   </>;
 }

@@ -55,6 +55,9 @@
 .expert-research-description { max-width: 1060px; margin: 56px auto 0; padding-top: 36px; border-top: 1px solid #d6dfeb; }
 .expert-research-description p { margin: 0 0 24px; font-size: 17px; line-height: 1.85; }
 .expert-research-description p:last-child { margin-bottom: 0; }
+.expert-research-description.expert-research-overview { max-width: none; margin: 0 0 32px; padding: 0; border: 0; }
+.expert-research-subtitle { margin: 0 0 24px; font-size: 22px; line-height: 1.5; color: var(--color-heading); }
+.expert-research-inspection { grid-template-columns: 1fr; }
 
 @media (max-width: 900px) {
   .expert-research-intro { gap: 24px; }
