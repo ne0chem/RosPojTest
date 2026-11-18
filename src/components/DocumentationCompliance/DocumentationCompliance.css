@@ -4,7 +4,7 @@
 .documentation-compliance h2::before { content: ''; display: block; width: 56px; height: 5px; margin-bottom: 30px; background: #c93840; }
 .documentation-compliance-lead { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr); align-items: center; gap: 48px; margin-bottom: 44px; }
 .documentation-compliance-lead > p { margin: 0; color: var(--color-heading); font-size: 22px; font-weight: 600; line-height: 1.65; }
-.documentation-compliance-visual { min-height: 220px; border-radius: 24px; background: linear-gradient(90deg, #eaf0f899, #eaf0f81a), url('/images/services/blueprints.jpg') center right / cover; opacity: .85; }
+.documentation-compliance-visual { min-height: 220px; border-radius: 24px; background: url('/images/services/rolled-blueprints.jpg') center / cover; }
 .documentation-compliance-copy { max-width: 1060px; margin-inline: auto; }
 .documentation-compliance-copy p, .documentation-compliance-conclusion p { margin: 0 0 24px; font-size: 17px; line-height: 1.85; }
 .documentation-compliance-elements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 36px 0 0; padding: 0; list-style: none; counter-reset: documentation-step; }

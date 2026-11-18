@@ -20,24 +20,8 @@ export default function ExpertResearch() {
       </ul>
       <div className="expert-research-description expert-research-overview">
         {expertResearchDescription.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-      </div>
-      <h3 className="expert-research-subtitle">Задачи, решаемые при расследовании пожаров и проведении экспертных исследований и испытаний:</h3>
-      <ul className="expert-research-works">
-        {expertResearchWorks.map((work) => (
-          <li key={work}>
-            <p>{work}</p>
-          </li>
-        ))}
-      </ul>
-      <div className="expert-research-description">
-        <p>{expertResearchInspectionIntro}</p>
-        <ul className="expert-research-works expert-research-inspection">
-          {expertResearchInspectionWorks.map(({ text }) => (
-            <li key={text}>
-              <p>{text}</p>
-            </li>
-          ))}
-        </ul>
+        <p>Задачи, решаемые при расследовании пожаров и проведении экспертных исследований и испытаний: {expertResearchWorks.map((work) => work.charAt(0).toLowerCase() + work.slice(1)).join('; ')}.</p>
+        <p>{expertResearchInspectionIntro} {expertResearchInspectionWorks.map(({ text }) => text.charAt(0).toLowerCase() + text.slice(1)).join('; ')}.</p>
       </div>
     </section>
   );
