@@ -27,7 +27,7 @@ export default function AboutCompany({ imageSrc }) {
           </ul>
         </div>
         <div className="about-company-visual">
-          {imageSrc && <img src={imageSrc} alt="Система дымоудаления и оборудование автоматического пожаротушения" loading="lazy" />}
+          {imageSrc && <img src={imageSrc} alt="Проверка пожарной сигнализации, систем оповещения, пожаротушения и дымоудаления" loading="lazy" />}
         </div>
       </div>
       <div className="about-company-details">
