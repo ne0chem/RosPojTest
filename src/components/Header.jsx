@@ -12,7 +12,7 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
   return <header className="header" ref={headerRef}><Container className="header-inner">
-    <Link className="brand" to="/" aria-label="Роспожтест — главная"><img className="brand-logo" src="/images/logo.svg" alt="" width="129" height="89" /><span className="brand-text"><strong>РОСПОЖТЕСТ</strong><small>ИСПЫТАТЕЛЬНАЯ<br/>ПОЖАРНАЯ ЛАБОРАТОРИЯ</small></span></Link>
+    <Link className="brand" to="/" aria-label="Роспожтест — главная"><img className="brand-logo" src="/images/logo.png" alt="" width="129" height="89" /><span className="brand-text"><strong>РОСПОЖТЕСТ</strong><small>ИСПЫТАТЕЛЬНАЯ<br/>ПОЖАРНАЯ ЛАБОРАТОРИЯ</small></span></Link>
     <nav className="navigation" aria-label="Основная навигация">{[['/','Главная'],['/services','Услуги'],['/#about-company','О компании'],['/contacts','Контакты']].map(([to,label]) => to === '/#about-company'
       ? <Link key={to} to={to} onClick={() => { if (pathname === '/') document.getElementById('about-company')?.scrollIntoView({ behavior: 'instant', block: 'start' }); }} className={`nav-link${pathname === '/' && hash === '#about-company' ? ' active' : ''}`} aria-current={pathname === '/' && hash === '#about-company' ? 'location' : undefined}>{label}</Link>
       : <NavLink key={to} to={to} end={to==='/'} className={({isActive})=>`nav-link${isActive && !(to === '/' && hash === '#about-company') ? ' active' : ''}`}>{label}</NavLink>)}</nav>

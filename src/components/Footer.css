@@ -1,4 +1,4 @@
-.footer { padding-block: 56px 24px; color: var(--color-text); background: var(--color-surface-end); border-top: 1px solid var(--color-border); font-size: 15px; line-height: 1.6; }
+.footer { padding-block: 56px 24px; color: var(--color-text); background: linear-gradient(to bottom, var(--color-background), var(--color-surface-end) 180px); font-size: 15px; line-height: 1.6; }
 .footer-main { display: grid; grid-template-columns: 1.2fr .8fr 1fr; gap: 64px; padding-bottom: 44px; }
 .footer-brand { max-width: 350px; }
 .footer-brand img { display: block; width: 116px; height: auto; margin-bottom: 22px; }

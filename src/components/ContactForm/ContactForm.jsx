@@ -11,10 +11,12 @@ function FieldIcon({ name }) {
 
 export default function ContactForm({ policyUrl = '/privacy-policy' }) {
   const [notice, setNotice] = useState('');
+  const [consent, setConsent] = useState(false);
 
   function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    if (!consent || !data.has('privacyConsent')) return;
     const name = data.get('name').trim();
     const phone = data.get('phone').trim();
     const comment = data.get('comment').trim();
@@ -34,15 +36,16 @@ export default function ContactForm({ policyUrl = '/privacy-policy' }) {
         </div>
       </div>
       <form className="contact-form" onSubmit={handleSubmit}>
+        <h3>Оставить заявку</h3>
         <label className="contact-form-field">
           <span className="contact-form-label">Ваше имя</span>
           <FieldIcon name="person" />
-          <input name="name" type="text" autoComplete="name" placeholder="Ваше имя" required maxLength={100} pattern=".*\S.*" />
+          <input name="name" type="text" autoComplete="name" placeholder="Ваше имя *" required maxLength={100} pattern=".*\S.*" />
         </label>
         <label className="contact-form-field">
           <span className="contact-form-label">Номер телефона</span>
           <Icon name="phone" />
-          <input name="phone" type="tel" autoComplete="tel" inputMode="tel" placeholder="Номер телефона" required maxLength={30}
+          <input name="phone" type="tel" autoComplete="tel" inputMode="tel" placeholder="Номер телефона *" required maxLength={30}
             onChange={(event) => {
               const digits = event.target.value.replace(/\D/g, '');
               const valid = /^[+\d\s()\-]+$/.test(event.target.value) && digits.length >= 10 && digits.length <= 15;
@@ -54,8 +57,10 @@ export default function ContactForm({ policyUrl = '/privacy-policy' }) {
           <FieldIcon name="comment" />
           <textarea name="comment" placeholder="Комментарий" rows={4} maxLength={2000} />
         </label>
-        <button className="button contact-form-submit" type="submit">Отправить заявку</button>
-        <PrivacyConsent policyUrl={policyUrl} />
+        <div className="contact-form-actions">
+          <PrivacyConsent policyUrl={policyUrl} checked={consent} onChange={(event) => setConsent(event.target.checked)} />
+          <button className="button contact-form-submit" type="submit" disabled={!consent}>Отправить заявку</button>
+        </div>
         <p className="contact-form-status" role="status">{notice}</p>
       </form>
     </section>

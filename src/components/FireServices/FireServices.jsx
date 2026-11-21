@@ -13,11 +13,18 @@ export default function FireServices({ categoryId = 'testing' }) {
         <h2 id={titleId}>{category.title}</h2>
       </div>
       <div className="fire-services-grid">
-        {services.map(({ id, title, price, unit, image }) => (
+        {services.map(({ id, title, description, standard, price, unit, image }) => (
           <article className="fire-service" key={id}>
             <div className="fire-service-image"><img src={`/images/services/fire/${image || id}.jpg`} alt="" loading="lazy" width="320" height="320" /></div>
-            <div className="fire-service-description"><h3>{title}</h3></div>
-            <div className="fire-service-price"><span>Стоимость:</span><strong>{price}</strong>{unit && <small>{unit}</small>}</div>
+            <div className="fire-service-description">
+              <h3>{title}</h3>
+              {description && <p className="fire-service-method">{description}</p>}
+              {standard && <div className="fire-service-standards">{standard.split(/,\s*| и (?=ГОСТ|СП)/).map((item) => <p className="fire-service-standard" key={item}>{item}</p>)}</div>}
+            </div>
+            <div className="fire-service-price">
+              <div className="fire-service-price-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"><path d="m3 11 13-8 13 8-13 8ZM3 16l13 8 13-8M3 21l13 8 13-8" /></svg></div>
+              <span>Стоимость:</span><strong>{price}</strong>{unit && <small>{unit}</small>}
+            </div>
           </article>
         ))}
       </div>

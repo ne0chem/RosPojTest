@@ -27,7 +27,7 @@
   bottom: 0;
   left: calc((100% - 100vw) / 2);
   width: 100vw;
-  height: clamp(140px, 16vw, 240px);
+  height: clamp(180px, 20vw, 300px);
   background: linear-gradient(
     to bottom,
     transparent 0%,
@@ -59,4 +59,131 @@
     letter-spacing: -.8px;
   }
 
+}
+
+.home-accreditation {
+  position: relative;
+  isolation: isolate;
+  padding-block: 60px 64px;
+}
+
+.home-accreditation::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 calc((100% - 100vw) / 2);
+  background:
+    linear-gradient(154deg, transparent 0 64%, #ffffffa6 64.1% 64.3%, transparent 64.4%),
+    linear-gradient(158deg, transparent 0 72%, #d65b6b24 72.1%, #d65b6b09 82%, transparent 82.1%),
+    linear-gradient(151deg, transparent 0 44%, #ffffff8c 44.1% 44.3%, transparent 44.4%),
+    linear-gradient(135deg, #edf2fa, #f4f6fc 48%, #e6ecf6);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 140px, #000 calc(100% - 100px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 140px, #000 calc(100% - 100px), transparent);
+  pointer-events: none;
+}
+
+.home-accreditation h2 {
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: clamp(30px, 3.5vw, 52px);
+}
+
+.home-accreditation .certificate-card {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 5vw, 88px);
+}
+
+.home-accreditation .certificate-copy h3 {
+  max-width: 560px;
+  font-size: clamp(24px, 2.2vw, 32px);
+  line-height: 1.15;
+}
+
+.home-accreditation .certificate-copy p {
+  margin-bottom: 36px;
+  font-size: clamp(16px, 1.3vw, 20px);
+  line-height: 1.45;
+}
+
+.home-accreditation .certificate-copy dl {
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
+
+.home-accreditation .certificate-copy dl > div {
+  position: relative;
+  display: block;
+  padding: 0 0 0 56px;
+  border: 0;
+}
+
+.home-accreditation .certificate-copy dl > div + div {
+  border-left: 1px solid #d6dfed;
+  padding-left: 72px;
+}
+
+.home-accreditation .certificate-copy dl > div::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 44px;
+  border-radius: 9px;
+  background: #dfe7f380 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='%23172f50' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H5v20h14V7zM14 2v6h5M8 12h8M8 16h8'/%3E%3C/svg%3E") center / 25px no-repeat;
+}
+
+.home-accreditation .certificate-copy dl > div + div::before {
+  left: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='%23172f50' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='16' rx='2'/%3E%3Cpath d='M7 2v6M17 2v6M3 11h18'/%3E%3C/svg%3E");
+}
+
+.home-accreditation .certificate-copy dt { margin-bottom: 4px; }
+.home-accreditation .certificate-copy dd { font-size: clamp(14px, 1.1vw, 18px); }
+
+.home-accreditation .certificate-open {
+  display: inline-flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 42px;
+  padding: 16px 28px;
+  min-width: min(100%, 340px);
+  min-height: 56px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #142c4c, #1c385c);
+  color: #fff;
+  font-size: 18px;
+}
+.home-accreditation .certificate-open:hover { background: #28496f; }
+.home-accreditation .certificate-open span { font-size: 25px; font-weight: 400; }
+.home-accreditation .certificate-file-note { font-size: 14px; }
+.home-accreditation .certificate-preview img {
+  border: 7px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 20px 32px #192d5330;
+}
+.home-accreditation .certificate-preview > span {
+  margin-top: 6px;
+  border-top: 1px solid #c7d3e6;
+  font-size: 16px;
+}
+.home-accreditation .certificate-preview > span > span { font-size: 24px; line-height: 1; }
+
+@media (max-width: 1100px) {
+  .home-accreditation .certificate-copy dl { grid-template-columns: 1fr; gap: 20px; }
+  .home-accreditation .certificate-copy dl > div + div { border: 0; padding-left: 56px; }
+  .home-accreditation .certificate-copy dl > div + div::before { left: 0; }
+}
+
+@media (max-width: 800px) {
+  .home-accreditation .certificate-card { grid-template-columns: 1fr; }
+  .home-accreditation .certificate-preview { max-width: none; }
+  .home-accreditation .certificate-copy h3 { max-width: 620px; }
+}
+
+@media (max-width: 480px) {
+  .home-accreditation { padding-block: 36px 40px; }
+  .home-accreditation .certificate-open { width: 100%; min-width: 0; padding-inline: 20px; font-size: 16px; }
+  .home-accreditation .certificate-file-note { font-size: 12px; }
+  .home-accreditation .certificate-preview img { border-width: 4px; }
 }

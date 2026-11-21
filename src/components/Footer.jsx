@@ -6,7 +6,7 @@ export default function Footer() {
   return <footer className="footer"><div className="container">
     <div className="footer-main">
       <div className="footer-brand">
-        <Link to="/" aria-label="Роспожтест — главная"><img src="/images/logo.svg" width="129" height="89" alt="РОСПОЖТЕСТ" /></Link>
+        <Link to="/" aria-label="Роспожтест — главная"><img src="/images/logo.png" width="129" height="89" alt="РОСПОЖТЕСТ" /></Link>
         <p>Испытательная пожарная лаборатория</p>
         <span>Испытания, исследования и экспертиза в области пожарной безопасности.</span>
       </div>
