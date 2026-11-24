@@ -7,6 +7,7 @@ import ServiceCategory from "./pages/Services/ServiceCategory";
 import About from "./pages/About/About";
 import Contacts from "./pages/Contacts/Contacts";
 import NotFound from "./pages/NotFound/NotFound";
+import Registry from "./pages/Registry/Registry";
 import Privacy from "./pages/Privacy/Privacy";
 
 export default function App() {
@@ -16,6 +17,8 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="services" element={<Services />} />
         <Route path="services/:categoryId" element={<ServiceCategory />} />
+        <Route path="registry" element={<Registry />} />
+        <Route path="registry/:registryId" element={<Registry />} />
         <Route path="about" element={<About />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="privacy-policy" element={<Privacy />} />

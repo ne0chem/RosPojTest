@@ -3,7 +3,6 @@
 .risk-assessment-hero { position: relative; min-height: 330px; }
 .risk-assessment-copy { position: relative; z-index: 1; width: 54%; }
 .risk-assessment h2 { margin: 0 0 32px; color: #031c35; font-size: clamp(30px, 3.2vw, 54px); line-height: 1.04; letter-spacing: -1.8px; font-weight: 800; }
-.risk-assessment h2::before { content: ''; display: block; width: 66px; height: 6px; margin-bottom: 24px; background: #ff1025; }
 .risk-assessment .risk-assessment-intro { margin: 0; padding-left: 24px; border-left: 3px solid #ff1025; font-size: clamp(16px, 1.2vw, 20px); line-height: 1.5; }
 .risk-assessment-art { position: absolute; z-index: 0; right: -2%; top: -35px; width: 47%; height: 390px; pointer-events: none; }
 .risk-assessment-art img { position: absolute; width: 90%; height: 115%; object-fit: contain; right: 0; top: -20px; filter: drop-shadow(0 20px 22px #263b6426); }
@@ -21,7 +20,6 @@
 .risk-assessment-photo-building img { object-position: 70% center; }
 .risk-assessment-photo-building::after { content: ''; position: absolute; inset: 75% 0 0; transform: skewY(-28deg); background: linear-gradient(120deg, transparent, #cf263b9c); border-top: 1px solid #ffb3b3; }
 .risk-assessment-card p { position: relative; margin: 0; padding: 38px 28px 34px 0; margin-left: 42%; font-size: clamp(16px, 1.18vw, 20px); line-height: 1.35; }
-.risk-assessment-card p::before { content: ''; display: block; width: 42px; height: 4px; margin-bottom: 16px; background: #ff1025; }
 .risk-assessment-card strong { color: #061d39; font-weight: 700; }
 @media (max-width: 1150px) {
   .risk-assessment-benefits { gap: 16px; margin-inline: 0; grid-template-columns: repeat(4, 1fr); }
@@ -47,7 +45,6 @@
   .risk-assessment { padding-block: 32px 44px; }
   .risk-assessment-copy { width: 100%; }
   .risk-assessment h2 { font-size: 30px; letter-spacing: -1px; margin-bottom: 24px; }
-  .risk-assessment h2::before { width: 48px; height: 4px; margin-bottom: 20px; }
   .risk-assessment .risk-assessment-intro { padding-left: 16px; }
   .risk-assessment-art { position: relative; width: 100%; height: 240px; top: auto; right: auto; margin-top: 12px; overflow: hidden; }
   .risk-assessment-art img { width: 100%; height: 115%; top: -15px; }

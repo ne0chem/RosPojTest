@@ -2,7 +2,6 @@
 .documentation-compliance::before { content: ''; position: absolute; z-index: -1; inset: 0 calc((100% - 100vw) / 2); background: radial-gradient(ellipse at 85% 8%, #dce3f0, transparent 40%), linear-gradient(135deg, #edf2fb, #f4f7fd 48%, #e8edf7); }
 .documentation-compliance-hero { position: relative; min-height: 340px; margin-bottom: 44px; }
 .documentation-compliance h2 { position: relative; z-index: 1; max-width: 62%; margin: 0 0 32px; color: #031c35; font-size: clamp(30px, 3.2vw, 54px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; }
-.documentation-compliance h2::before { content: ''; display: block; width: 66px; height: 6px; margin-bottom: 24px; background: #ff1025; }
 .documentation-compliance-lead { position: relative; z-index: 1; width: 54%; }
 .documentation-compliance-lead > p { margin: 0; padding-left: 24px; border-left: 3px solid #ff1025; font-size: clamp(18px, 1.3vw, 22px); line-height: 1.5; }
 .documentation-compliance-visual { position: absolute; inset: -10px -24px auto auto; width: 42%; height: 350px; pointer-events: none; }
@@ -10,7 +9,6 @@
 .documentation-compliance-ribbon { position: absolute; left: -26%; top: 0; width: 126%; height: 100%; mask-image: linear-gradient(90deg, transparent, #000 35%); }
 .documentation-compliance-copy { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .documentation-compliance-copy p { position: relative; margin: 0; padding: 32px; border: 1px solid #fff; border-radius: 24px; background: linear-gradient(125deg, #ffffffad, #f6f8fc77); box-shadow: 0 18px 36px #243d6409; font-size: clamp(16px, 1.12vw, 19px); line-height: 1.6; }
-.documentation-compliance-copy p::before { content: ''; display: block; width: 42px; height: 4px; margin-bottom: 20px; background: #ff1025; }
 .documentation-compliance-copy p:last-child { grid-column: 1 / -1; padding-left: 32%; overflow: hidden; }
 .documentation-compliance-copy p:last-child::after { content: ''; position: absolute; inset: 0 auto 0 0; width: 28%; background: linear-gradient(0deg, #142c4c15, transparent), url('/images/services/blueprints.jpg') center / cover; clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%); }
 .documentation-compliance-elements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 36px 0 0; padding: 0; list-style: none; }
@@ -38,7 +36,6 @@
 @media (max-width: 540px) {
  .documentation-compliance { padding: 32px 0 44px; }
  .documentation-compliance h2 { font-size: 30px; letter-spacing: -1px; margin-bottom: 24px; }
- .documentation-compliance h2::before { width: 48px; height: 4px; margin-bottom: 20px; }
  .documentation-compliance-lead { width: 100%; min-height: 0; }
  .documentation-compliance-lead > p { padding-left: 16px; }
  .documentation-compliance-visual { position: relative; inset: auto; width: 100%; height: 240px; margin-top: 20px; }

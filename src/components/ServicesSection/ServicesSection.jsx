@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { serviceCategories } from '../../data/serviceCategories';
 import './ServicesSection.css';
 
-function ServiceIcon({ name }) {
+export function ServiceIcon({ name }) {
   const drawings = {
     certificate: <><path d="M31 49H12a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3h29a3 3 0 0 1 3 3v17M17 15h19M17 23h19M17 31h10M17 39h7"/><circle className="service-icon-accent" cx="41" cy="37" r="10"/><path className="service-icon-accent" d="m36 37 3 3 6-6m-10 11-3 11 9-5 9 5-3-11"/></>,
     fire: <><path d="M26 4c2 12-10 13-8 23 1-5 5-7 7-11 1 7 12 10 10 20 7-4 8-12 5-18 12 16 5 31-13 31C8 49 4 32 14 19c-1 7 0 10 2 12C11 18 24 15 26 4Z"/><path className="service-icon-accent" d="M27 29c1 7-6 8-6 14a7 7 0 0 0 14 0c0-5-6-8-8-14Z"/></>,

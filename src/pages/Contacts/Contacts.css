@@ -6,16 +6,6 @@
 .contacts-page h1 {
   margin: 0 0 34px;
 }
-.contacts-page h1::after,
-.contacts-page h2::after {
-  content: "";
-  display: block;
-  width: 72px;
-  height: 5px;
-  margin-top: 20px;
-  border-radius: 3px;
-  background: var(--color-accent);
-}
 .contacts-page .contacts-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

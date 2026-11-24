@@ -27,7 +27,6 @@
   pointer-events: none;
 }
 .fire-services-heading { position: relative; min-height: 240px; padding: 4px 18px 76px; }
-.fire-services-heading::before { content: ''; display: block; width: 56px; height: 5px; background: #c93840; margin-bottom: 30px; }
 .fire-services h2 { max-width: 900px; margin: 0; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.15; letter-spacing: -1.4px; }
 .fire-services-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
 .fire-service { position: relative; isolation: isolate; display: grid; grid-template-columns: 27% minmax(0, 1fr) 24%; align-items: center; min-height: 290px; overflow: hidden; border: 1px solid #dce3ed; border-radius: 30px; background: linear-gradient(135deg, #fafcfe, #f1f4fa); box-shadow: 0 12px 28px #30496512; }

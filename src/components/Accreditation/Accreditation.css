@@ -11,14 +11,6 @@
   letter-spacing: var(--letter-spacing-title);
 }
 
-.accreditation h2::before {
-  content: '';
-  display: block;
-  width: 72px;
-  height: 5px;
-  margin-bottom: 28px;
-  background: var(--color-accent);
-}
 
 .certificate-card {
   display: grid;

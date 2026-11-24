@@ -24,14 +24,6 @@
   text-transform: uppercase;
 }
 
-.about-company-eyebrow::before {
-  content: '';
-  display: block;
-  width: 72px;
-  height: 5px;
-  margin-bottom: 24px;
-  background: var(--color-accent);
-}
 
 .about-company h2 {
   margin: 0 0 8px;

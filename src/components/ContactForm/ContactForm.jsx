@@ -55,7 +55,7 @@ export default function ContactForm({ policyUrl = '/privacy-policy' }) {
         <label className="contact-form-field contact-form-field--comment">
           <span className="contact-form-label">Комментарий</span>
           <FieldIcon name="comment" />
-          <textarea name="comment" placeholder="Комментарий" rows={4} maxLength={2000} />
+          <textarea name="comment" placeholder="Комментарий" rows={2} maxLength={2000} />
         </label>
         <div className="contact-form-actions">
           <PrivacyConsent policyUrl={policyUrl} checked={consent} onChange={(event) => setConsent(event.target.checked)} />
